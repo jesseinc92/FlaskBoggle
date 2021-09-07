@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block game %}
+    <table id="game-board">
+    {% for row in session['boggle_board'] %}
+        <tr>
+        {% for letter in row %}
+            <td>{{letter}}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+{% block guess %}
+    <form id="guess-form">
+        <input type="text" id="guess-input" placeholder="guess">
+        <button>Guess</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,29 @@
+#game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-board {
+    border-collapse: collapse;
+}
+
+#game-board td {
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+#guess-message {
+    text-align: center;
+}
+
+#guess-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#guess-container * {
+    padding: 0.5rem;
+}
