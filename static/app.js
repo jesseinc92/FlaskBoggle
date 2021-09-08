@@ -78,6 +78,8 @@ timerFunction = setInterval(countdown, 1000);
 score = 0
 $('#score').text(score)
 
+guessedWords = new Set();
+
 // take the form value and check
 // for word validity
 
@@ -112,9 +114,10 @@ $('#guess-form').on('submit', async function (e) {
     // clear the input field for a new guess
     $('#guess-input').val('')
 
-    // if the response is 'ok' add the score
-    if (res == 'ok') {
+    // if the response is 'ok' add the score only if word hasn't been guessed
+    if (res == 'ok' && !guessedWords.has(guess)) {
         score += setScore(guess)
+        guessedWords.add(guess);
     }
 
     // display the message for each guess
