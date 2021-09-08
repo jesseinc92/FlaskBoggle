@@ -1,4 +1,3 @@
-from itertools import count
 from boggle import Boggle
 from flask import Flask, request, session, render_template, jsonify
 
