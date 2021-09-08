@@ -22,6 +22,8 @@ def init_board():
 @app.route('/check-guess', methods=['POST'])
 def check_guess():
     # check that the user has guessed a valid word
+    # send back whether the word is valid, not on the board, or ok
+    
     word = request.get_json().get('guess')
     response = boggle_game.check_valid_word(session['boggle_board'], word);
 

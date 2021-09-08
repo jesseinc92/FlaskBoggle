@@ -13,7 +13,20 @@
         {% block guess %} {% endblock %}
     </div>
 
-    <p id="guess-message"></p>
+    <p id="guess-message">
+        <!-- displays whether the guess is 'ok', 'not on board', or 'not a word' -->
+    </p>
+
+    <div>
+        <p>score</p>
+        <p id="score"></p>
+    </div>
+    
+    <div>
+        <p>timer</p>
+        <p id="timer"></p>
+    </div>
+    
 
     <div id="game-container">
         {% block game %} {% endblock %}
